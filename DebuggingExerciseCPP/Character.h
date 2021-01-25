@@ -30,8 +30,8 @@ public:
 
 private:
 	const char* m_name = new char();
-	float m_health = 0;
-	float m_damage = 0;
-	float m_defense = 0;
+	float m_health = 100;
+	float m_damage = 10;
+	float m_defense = 5;
 };
 
