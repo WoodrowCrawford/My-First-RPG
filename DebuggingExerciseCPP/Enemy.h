@@ -15,5 +15,9 @@ public:
     /// <param name="other">The other character to attack.</param>
     /// <returns>The total damage dealt.</returns>
     virtual float attack(Character* other);
+
+
+private:
+    float m_health = 0;
 };
 

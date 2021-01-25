@@ -1,3 +1,7 @@
+#include "Player.h"
+
+
+
 
 
 float Player::takeDamage(float damage)
@@ -21,3 +25,5 @@ float Player::getDefense()
 {
     return Character::getDefense() + m_shield.getStatusBoost();
 }
+
+
