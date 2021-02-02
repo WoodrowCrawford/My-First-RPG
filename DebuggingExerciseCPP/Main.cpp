@@ -13,7 +13,7 @@
 int printOptions(const char* context, const char* option1, const char* option2)
 {
 	
-	int input = -1;
+	int input = 0;
 
 	//Loops until the player selects an existing option
 	while (input != 1 && input != 2)
@@ -45,12 +45,12 @@ int printOptions(const char* context, const char* option1, const char* option2)
 /// Prints all stats for the given character to the screen.
 /// </summary>
 /// <param name="character">The character to print stats for.</param>
-void printCharacterStats(Character* other)
+void printCharacterStats(Character* player)
 {
-	std::cout << "Name: " << other->getName() << std::endl;
-	std::cout << "Health: " << other->getHealth() << std::endl;
-	std::cout << "Attack Power: " << other->getDamage() << std::endl;
-	std::cout << "Defense: " << other->getDefense() << std::endl;
+	std::cout << "Name: " << player->getName() << std::endl;
+	std::cout << "Health: " << player->getHealth() << std::endl;
+	std::cout << "Attack Power: " << player->getDamage() << std::endl;
+	std::cout << "Defense: " << player->getDefense() << std::endl;
 }
 
 /// <summary>
@@ -89,10 +89,13 @@ int startPlayerBattle(Player* player, Enemy* enemy)
 
 		//Enemy attack.
 		std::cout << enemy->getName() << " did: " << enemy->attack(player) << " damage!" << std::endl;
+		
 		system("pause");
+		
 	}
 
-	return player->getHealth() > 0;
+	return player->getHealth();
+	
 }
 
 int main()

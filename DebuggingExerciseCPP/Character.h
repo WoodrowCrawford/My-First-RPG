@@ -29,7 +29,7 @@ public:
 	virtual float getDefense() { return m_defense; }
 
 private:
-	const char* m_name = new char();
+	const char* m_name = "John";
 	float m_health = 100;
 	float m_damage = 10;
 	float m_defense = 5;
