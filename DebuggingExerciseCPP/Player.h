@@ -7,7 +7,7 @@ class Player :
 {
 public:
     Player() : Character() {}
-    Player(const char* name, float health, float damage, float defense) : Character() {}
+    Player(const char* name, float health, float damage, float defense);
 
 
         /// <summary>
@@ -26,7 +26,7 @@ public:
 
     /// <summary>
     /// Reduces the damage taken by the defense amount. 
-    /// If the player has a shield equipped, the damage is reduced even more by
+    /// If the player has a shield equipped, the damage is reduced even more bytretrtrtrtrtr
     /// the shield boost.
     /// </summary>
     /// <param name="damage">The damage to deal to the player.</param>
@@ -52,6 +52,8 @@ public:
 private:
     Item m_weapon;
     Item m_shield;
-    float m_health = 0;
+
+
+
 };
 

@@ -4,10 +4,10 @@
 
 Enemy::Enemy(const char* name, float health, float damage, float defense)
 {
-    name = "Enemy";
-    health = 100;
-    damage = 10;
-    defense = 2;
+    m_name = name;
+    m_health = health;
+    m_damage = damage;
+    m_defense = defense;
 }
 
 float Enemy::attack(Character* other)
@@ -17,5 +17,5 @@ float Enemy::attack(Character* other)
     /* generate secret number between 1 and 10: */
     float randomDamage = rand() % 10 + 1;
 
-    return takeDamage(other->getDamage() + randomDamage);
+    return other->takeDamage(getDamage() + randomDamage);
 }

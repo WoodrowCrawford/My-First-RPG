@@ -45,12 +45,12 @@ int printOptions(const char* context, const char* option1, const char* option2)
 /// Prints all stats for the given character to the screen.
 /// </summary>
 /// <param name="character">The character to print stats for.</param>
-void printCharacterStats(Character* player)
+void printCharacterStats(Character* other)
 {
-	std::cout << "Name: " << player->getName() << std::endl;
-	std::cout << "Health: " << player->getHealth() << std::endl;
-	std::cout << "Attack Power: " << player->getDamage() << std::endl;
-	std::cout << "Defense: " << player->getDefense() << std::endl;
+	std::cout << "Name: " << other->getName() << std::endl;
+	std::cout << "Health: " << other->getHealth() << std::endl;
+	std::cout << "Attack Power: " << other->getDamage() << std::endl;
+	std::cout << "Defense: " << other->getDefense() << std::endl;
 }
 
 /// <summary>
@@ -84,8 +84,11 @@ int startPlayerBattle(Player* player, Enemy* enemy)
 		//If action select was attack, have the player attack the enemy. Otherwise, return that the player escaped.
 		if (choice == 1)
 			std::cout << "You did: " << player->attack(enemy) << " damage!" << std::endl;
-		else
+		if (choice == 2)
+		{
 			return 2;
+		}
+			
 
 		//Enemy attack.
 		std::cout << enemy->getName() << " did: " << enemy->attack(player) << " damage!" << std::endl;

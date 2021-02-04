@@ -27,11 +27,14 @@ public:
 	virtual float getHealth() { return m_health; }
 	virtual float getDamage() { return m_damage; }
 	virtual float getDefense() { return m_defense; }
+	
+	
+protected:
 
-private:
-	const char* m_name = "John";
+	const char* m_name;
 	float m_health = 100;
 	float m_damage = 10;
 	float m_defense = 5;
+
 };
 
